@@ -1,0 +1,19 @@
+:root {
+  --clr-text-main: #0c0a06;
+  --clr-text-light: #716a5a;
+  --clr-background: #eeeae0;
+  --clr-accent: #0699aa;
+  --clr-accent-light: #22aebe;
+}
+
+
+
+
+::-moz-selection {
+  color: var(--clr-background);
+  background: var(--clr-accent);
+}
+::selection {
+  color: var(--clr-background);
+  background: var(--clr-accent);
+}

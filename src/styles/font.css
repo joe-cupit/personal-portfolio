@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root {
+  --ff-heading: "Young Serif", serif;
+  --ff-body: "Instrument Sans", sans-serif;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.page-title,
+.title,
+.subtitle {
+  font-family: var(--ff-heading);
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--clr-text-main);
+}
+.title {
+  font-size: 3rem;
+  text-transform: lowercase;
+}
+.subtitle {
+  font-size: 1.75rem;
+  text-transform: lowercase;
+}
+
+.subtext {
+  font-size: 1rem;
+}
