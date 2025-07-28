@@ -45,3 +45,94 @@
 .navbar li:hover {
   text-decoration: underline;
 }
+
+
+.home__container {
+  display: grid;
+  gap: 0.5rem;
+  justify-items: center;
+
+  padding-block: 2.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding-block: 5rem;
+
+  width: 100%;
+  height: 35rem;
+}
+.hero .title {
+  text-align: left;
+}
+.hero ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 1.25rem;
+
+  text-transform: lowercase;
+}
+.hero ul span {
+  color: var(--clr-accent);
+  font-weight: 1000;
+  user-select: none;
+}
+
+.projects {
+  background: #d3c5b3;
+}
+.projects__list {
+  display: grid;
+  gap: 4rem;
+
+  width: 100%;
+  margin-inline: auto;
+  margin-block: 2rem;
+}
+
+.project {
+  display: grid;
+  gap: 1rem;
+
+  width: 100%;
+}
+.project__image {
+  aspect-ratio: 16 / 9;
+
+  background: #fff4;
+}
+
+
+.about__container {
+  display: grid;
+  gap: 2.5rem;
+
+  margin-block: 2rem;
+  width: min(100%, 700px);
+  margin-inline: auto;
+}
+.about__section {
+  display: grid;
+  gap: 1rem;
+}
+.about__section .subtitle {
+  font-family: var(--ff-body);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.about a {
+  font-weight: 600;
+  transition: color 150ms;
+}
+.about a:hover {
+  color: var(--clr-accent);
+}

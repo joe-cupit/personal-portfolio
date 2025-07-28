@@ -1,0 +1,27 @@
+---
+import ArrowRightIcon from "../icons/ArrowRightIcon.astro"
+
+const {
+  year,
+  title = "Title",
+  description = "Description",
+  link,
+  } = Astro.props;
+---
+
+
+<article class="project">
+  <div>
+    {year && <span class="subtext">{year}</span>}
+    <h3 class="subtitle">{title}</h3>
+  </div>
+  <p>{description}</p>
+  <a class="button" href={link} target="_blank">
+    Visit site
+    <ArrowRightIcon />
+  </a>
+
+  <div class="project__image">
+
+  </div>
+</article>
