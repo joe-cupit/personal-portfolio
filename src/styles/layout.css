@@ -6,6 +6,18 @@
   padding-block: 1rem;
   color: var(--clr-text-main);
   background: var(--clr-background);
+
+  border-top: 3px solid var(--clr-text-main);
+  border-bottom: 3px solid var(--clr-text-main);
+}
+.navbar__left {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 40rem) {
+    gap: 1.25rem;
+  }
 }
 .navbar__logo {
   font-family: var(--ff-heading);
@@ -14,14 +26,7 @@
   line-height: 1;
   user-select: none;
 }
-.navbar__logo span {
-  display: none;
-}
-.navbar__logo:hover span {
-  display: initial;
-}
 .navbar nav {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,22 +35,106 @@
   margin-inline: auto;
 }
 .navbar ul {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -40%;
-
+  position: relative;
   list-style: none;
-  display: flex;
-  gap: 3rem;
+  display: contents;
 
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 500;
 }
-.navbar li:hover {
-  text-decoration: underline;
+.navbar__spacer {
+  height: 1.75rem;
+  width: 2px;
+  margin-inline: -0.5rem;
+  background: var(--clr-text-main);
+}
+.navbar ul a {
+  position: relative;
+}
+.navbar ul a::after {
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 0;
+
+  width: 0;
+  height: 2px;
+  background: black;
+
+  transition-property: width, translate;
+  transition-duration: 150ms;
+}
+.navbar ul a:hover::after {
+  width: 100%;
 }
 
+
+
+
+
+.footer {
+  color: var(--clr-background);
+  background: var(--clr-text-main);
+}
+.footer .title {
+  color: inherit;
+}
+.footer__container {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  
+  padding-block: 2rem;
+}
+.footer .title {
+  margin-block-end: 4rem;
+}
+
+.footer a {
+  transition: color 150ms;
+}
+.footer a:hover {
+  color: var(--clr-accent-light);
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 30rem) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+.footer ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+}
+.footer__socials a svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.footer__bottom {
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-transform: none;
+  margin-block-start: 1rem;
+
+  @media (max-width: 30rem) {
+    text-align: center;
+  }
+}
 
 .home__container {
   display: grid;
