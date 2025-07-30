@@ -234,3 +234,18 @@
 .about a:hover {
   color: var(--clr-accent);
 }
+
+
+.contact__container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+
+  background: var(--clr-background);
+  border: 6px solid var(--clr-text-main);
+  padding-inline: 2rem;
+  padding-block: 1.5rem;
+
+  margin-block: 2rem;
+}
