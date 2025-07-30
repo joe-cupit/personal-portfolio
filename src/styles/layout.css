@@ -176,7 +176,12 @@
 }
 
 .projects {
-  background: #d3c5b3;
+  background: var(--clr-background-dark);
+  border-top: 4px solid var(--clr-text-main);
+  border-bottom: 4px solid var(--clr-text-main);
+}
+.projects__intro {
+  text-align: center;
 }
 .projects__list {
   display: grid;
@@ -194,9 +199,13 @@
   width: 100%;
 }
 .project__image {
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  overflow: hidden;
 
-  background: #fff4;
+  aspect-ratio: 16 / 10;
+  background: #3332;
+
+  border: 3px solid var(--clr-text-main);
 }
 
 

@@ -1,11 +1,13 @@
 ---
 import ArrowRightIcon from "../icons/ArrowRightIcon.astro"
+import { Image } from "astro:assets";
 
 const {
   year,
   title = "Title",
   description = "Description",
   link,
+  image,
   } = Astro.props;
 ---
 
@@ -22,6 +24,8 @@ const {
   </a>
 
   <div class="project__image">
-
+    {image &&
+      <Image src={image} alt={"Screenshot of " + title + " homepage"} loading="lazy" />
+    }
   </div>
 </article>

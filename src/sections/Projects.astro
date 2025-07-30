@@ -1,11 +1,14 @@
 ---
 import Project from "../components/Project.astro";
+
+import WainroutesImage from "../images/wainroutes-1.png";
+import VocalyseImage from "../images/vocalyse-1.png";
 ---
 
 <section class="projects" id="projects">
   <div class="home__container">
     <h2 class="title">Projects</h2>
-    <p>A collection of website design and development projects I have done.</p>
+    <p class="projects__intro">Some of my latest website design and development projects</p>
 
     <div class="projects__list">
       <Project
@@ -13,6 +16,7 @@ import Project from "../components/Project.astro";
         title="Wainroutes"
         description="A React-based web app for planning and exploring the Wainwrights in the Lake District. Featuring routes, weather forecasts, travel information, and an interactive GPX route editor."
         link="https://wainroutes.co.uk/"
+        image={WainroutesImage}
       />
 
       <Project
@@ -20,6 +24,7 @@ import Project from "../components/Project.astro";
         title="Vocalyse Ltd."
         description="React-based company website, improving impressions and contacts."
         link="https://www.vocalyse.co.uk/"
+        image={VocalyseImage}
       />
     </div>
   </div>
