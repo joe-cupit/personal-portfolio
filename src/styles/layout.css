@@ -1,9 +1,16 @@
+:root {
+  --gap-400: clamp(0.75rem, 1.5vw, 1rem);
+  --gap-500: clamp(1rem, 3vw, 1.5rem);
+  --gap-600: clamp(1.375rem, 4vw, 2rem);
+  --gap-800: clamp(2.5rem, 6vw, 4rem);
+}
+
 
 .navbar {
   position: sticky;
   top: 0;
 
-  padding-block: 1rem;
+  padding-block: var(--gap-400);
   color: var(--clr-text-main);
   background: var(--clr-background);
 
@@ -12,12 +19,8 @@
 }
 .navbar__left {
   display: flex;
-  gap: 2rem;
+  gap: var(--gap-600);
   align-items: center;
-
-  @media (max-width: 40rem) {
-    gap: 1.25rem;
-  }
 }
 .navbar__logo {
   font-family: var(--ff-heading);
@@ -25,6 +28,7 @@
   font-size: 2.25rem;
   line-height: 1;
   user-select: none;
+  margin-inline-start: calc(var(--gap-400) / 2);
 }
 .navbar nav {
   display: flex;
@@ -43,9 +47,9 @@
   font-weight: 500;
 }
 .navbar__spacer {
-  height: 1.75rem;
+  height: 1.5lh;
   width: 2px;
-  margin-inline: -0.5rem;
+  margin-inline: calc(var(--gap-400) * -0.375);
   background: var(--clr-text-main);
 }
 .navbar ul a {
@@ -81,7 +85,7 @@
 }
 .footer__container {
   display: grid;
-  gap: 1rem;
+  gap: var(--gap-400);
   justify-items: center;
   
   padding-block: 2rem;
@@ -101,35 +105,36 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-block-start: var(--gap-800);
 
   @media (max-width: 30rem) {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: var(--gap-600);
   }
 }
 .footer ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: var(--gap-600);
   font-weight: 600;
   text-transform: lowercase;
 }
 
 .footer__socials {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-400);
 }
 .footer__socials a svg {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 2ch;
+  height: 2ch;
 }
 .footer__bottom {
   width: 100%;
   font-size: var(--fs-300);
   font-weight: 400;
   text-transform: none;
-  margin-block-start: 1rem;
+  margin-block-start: var(--gap-600);
 
   @media (max-width: 30rem) {
     text-align: center;
@@ -138,24 +143,24 @@
 
 .home__container {
   display: grid;
-  gap: 0.5rem;
+  gap: calc(var(--gap-400) / 2);
   justify-items: center;
 
-  padding-block: 2.5rem;
+  padding-block: calc(var(--gap-600) * 1.25);
 }
 
 .hero {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: var(--gap-500);
   justify-content: center;
   align-items: center;
   text-align: center;
 
-  padding-block: 5rem;
+  padding-block: var(--gap-800);
 
   width: 100%;
-  height: 35rem;
+  height: max(28rem, 80svh);
 }
 .hero .title {
   text-align: left;
@@ -163,14 +168,38 @@
 .hero ul {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  column-gap: var(--gap-600);
   align-items: center;
   font-size: var(--fs-450);
 }
 .hero ul span {
-  color: var(--clr-accent);
-  font-weight: 1000;
-  user-select: none;
+  background: var(--clr-accent);
+  min-width: 0.5ch;
+  min-height: 0.5ch;
+  border-radius: 50%;
+}
+
+@media (max-width: 33rem) {
+  .hero {
+    text-align: left;
+    align-items: start;
+  }
+  .hero .page-title {
+    max-width: 6ch;
+  }
+  .hero ul {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.25rem;
+  }
+  .hero ul span {
+    width: 105%;
+    min-height: initial;
+    height: 2px;
+    border-radius: 0;
+    margin-inline: auto;
+    background: currentColor;
+  }
 }
 
 .projects {
@@ -183,16 +212,16 @@
 }
 .projects__list {
   display: grid;
-  gap: 4rem;
+  gap: var(--gap-800);
 
   width: 100%;
   margin-inline: auto;
-  margin-block: 2rem;
+  margin-block: var(--gap-600);
 }
 
 .project {
   display: grid;
-  gap: 1rem;
+  gap: var(--gap-400);
 
   width: 100%;
 }
@@ -209,15 +238,15 @@
 
 .about__container {
   display: grid;
-  gap: 2.5rem;
+  gap: var(--gap-600);
 
-  margin-block: 2rem;
+  margin-block: var(--gap-600);
   width: min(100%, 700px);
   margin-inline: auto;
 }
 .about__section {
   display: grid;
-  gap: 1rem;
+  gap: var(--gap-400);
 }
 .about__section .subtitle {
   font-family: var(--ff-body);
@@ -236,14 +265,15 @@
 
 .contact__container {
   display: flex;
-  gap: 1rem;
+  gap: var(--gap-400);
   justify-content: space-between;
   align-items: center;
 
   background: var(--clr-background);
   border: 6px solid var(--clr-text-main);
-  padding-inline: 2rem;
-  padding-block: 1.5rem;
+  padding-inline: var(--gap-600);
+  padding-block: var(--gap-500);
 
-  margin-block: 2rem;
+  margin-block: var(--gap-600);
+  overflow: hidden;
 }

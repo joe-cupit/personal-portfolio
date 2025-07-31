@@ -21,7 +21,7 @@ body {
 section,
 header,
 footer {
-  --section-padding: 1.5rem;
+  --section-padding: var(--gap-500);
   --content-max-width: 1000px;
 
   display: grid;
@@ -34,13 +34,6 @@ footer {
     [content-end]
     minmax(var(--section-padding), 1fr)
     [full-width-end];
-
-  @media (max-width: 41rem) {
-    --section-padding: 1.25rem;
-  }
-}
-header {
-  --section-padding: 1rem;
 }
 section > *,
 header > *,
