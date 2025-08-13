@@ -9,8 +9,10 @@ body {
   width: 100%;
   min-height: 100vh;
 
-  color: var(--clr-text-light);
+  font-weight: 500;
+  color: var(--clr-text-main);
   background: var(--clr-background);
+  text-transform: lowercase;
 
   scroll-padding: 5rem;
   @media (prefers-reduced-motion: no-preference) {
@@ -25,6 +27,7 @@ footer {
   --content-max-width: 1000px;
 
   display: grid;
+  overflow: hidden;
   width: 100%;
   grid-template-columns:
     [full-width-start]

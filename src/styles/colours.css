@@ -1,7 +1,9 @@
 :root {
-  --clr-text-main: #0c0a06;
-  --clr-text-light: #716a5a;
-  --clr-background: #eeeae0;
+  --clr-text-main: #000e11;
+  --clr-text-light: #adaa9c;
+  --clr-text-white: #FBF5DE;
+  --clr-background: #fffcf0;
+  --clr-background-dark: #e7ceb6;
   --clr-accent: #0699aa;
   --clr-accent-light: #22aebe;
 }
@@ -10,10 +12,10 @@
 
 
 ::-moz-selection {
-  color: var(--clr-background);
+  color: var(--clr-text-white);
   background: var(--clr-accent);
 }
 ::selection {
-  color: var(--clr-background);
+  color: var(--clr-text-white);
   background: var(--clr-accent);
 }
