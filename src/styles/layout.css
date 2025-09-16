@@ -6,6 +6,18 @@
 }
 
 
+.error-page {
+  display: grid;
+  grid-template-rows: min-content;
+  gap: 1rem;
+  justify-content: center;
+  text-align: center;
+
+  margin-block-start: 2rem;
+  min-height: 65vh;
+}
+
+
 .navbar {
   position: sticky;
   top: 0;
@@ -77,6 +89,8 @@
 .footer {
   color: var(--clr-text-white);
   background: var(--clr-text-main);
+
+  margin-block-start: auto;
 }
 .footer .title {
   color: inherit;

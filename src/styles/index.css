@@ -20,6 +20,11 @@ body {
   }
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 section,
 header,
 footer {
